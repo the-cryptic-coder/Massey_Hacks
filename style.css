@@ -1,0 +1,142 @@
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+    
+    .nav {
+      background: #0093FF;
+      height: 60px;
+      width: 100%;
+      position: fixed;
+      z-index: 2;
+    }
+    
+    .nav ul {
+      height: 60px;
+      margin: 0 auto;
+      padding: 0;
+      text-align: right;
+    }
+    
+    .nav ul li {
+      font-family: "Arial";
+      display: inline-block;
+      color: white;
+      height: 60px;
+      line-height: 60px;
+      list-style: none;
+      padding: 0 10px;
+      transition: background 0.5s;
+    }
+    
+    .btn:hover,
+    .nav ul li:hover {
+      background: black;
+      cursor: pointer;
+      transition: background 0.5s;
+    }
+    
+    .logo {
+      position: absolute;
+      line-height: 55px;
+      padding-left: 20px;
+    }
+    
+    
+    header {
+      background-image: url("https://content.codecademy.com/projects/innovation-cloud/bg.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 100vh;
+    }
+    
+    header .container {
+        position: relative;
+        top: 200px;
+    }
+    
+    header h1 {
+        color: #fff;
+        font: 400 15px/1.8 "Algerian", sans-serif;
+        line-height: 100px; 
+        font-size: 80px;
+        margin-top: 0;
+        margin-bottom: 80px;
+        text-transform: uppercase; 
+        text-align:center;
+        font-weight:400;
+    }
+    
+    header h3 {
+        color: #fff;
+        text-transform: uppercase; 
+        text-align:center;
+    }
+    
+    footer .background-img{
+        background-image: url("https://content.codecademy.com/projects/innovation-cloud/jumbotron_bg.jpg");
+    }
+    
+    .background-img {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+    }
+    
+    main img {
+        float: left;
+        margin:50px 80px 50px 20px;
+    }
+    
+    
+    h2 {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
+    
+    .description {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 40px;
+        margin-bottom:75px;
+        margin-top:50px;
+    }
+    
+
+    
+    .text {
+        padding-left: 50px;
+        padding-top: 30px;
+    }
+    
+    #aboutName {
+        margin-top:50px;
+    }
+    
+    .footerText {
+        color:white;
+        text-align:right;
+        padding-top: 40vh; 
+        padding-right:100px;
+        font-weight: bolder;
+    }
+    
+    .footerPara {
+        padding-top:-50px;
+        padding-right:100px;
+        text-align:right;
+        color:white;
+    }
