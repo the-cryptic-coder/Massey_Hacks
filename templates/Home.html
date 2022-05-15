@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Swift Math</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+    
+    .nav {
+      background: #0093FF;
+      height: 60px;
+      width: 100%;
+      position: fixed;
+      z-index: 2;
+    }
+    
+    .nav ul {
+      height: 60px;
+      margin: 0 auto;
+      padding: 0;
+      text-align: right;
+    }
+    
+    .nav ul li {
+      font-family: "Courier New";
+      display: inline-block;
+      color: white;
+      height: 60px;
+      line-height: 60px;
+      list-style: none;
+      padding: 0 10px;
+      transition: background 0.5s;
+    }
+    
+    .btn:hover,
+    .nav ul li:hover {
+      background: black;
+      cursor: pointer;
+      transition: background 0.5s;
+    }
+    
+    .logo {
+      position: absolute;
+      line-height: 55px;
+      padding-left: 20px;
+    }
+
+    .learn-more {
+      border: none;
+      padding: 20px 40px;
+      width:14%;
+      margin-left:43%;
+      margin-right:43%;
+      background-color: rgb(35, 43, 43);
+      color: white;
+      font-family: "Courier New";
+      transition: opacity 500ms ease-in-out;
+      border-radius:5px;
+    }
+    .learn-more:hover {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+    
+    header {
+      background-image: url("https://content.codecademy.com/projects/innovation-cloud/bg.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 100vh;
+    }
+    
+    header .container {
+        position: relative;
+        top: 200px;
+    }
+    
+    header h1 {
+        color: #fff;
+        font-family: 'Abril Fatface', cursive;
+        letter-spacing: 5px;
+        font-weight:bold;
+        line-height: 100px; 
+        font-size: 80px;
+        margin-top: 0;
+        margin-bottom: 80px;
+        text-transform: uppercase; 
+        text-align:center;
+        font-weight:400;
+    }
+    
+    header h3 {
+        color: #fff;
+        text-transform: uppercase; 
+        text-align:center;
+        font-family: "Courier New";
+
+    }
+    
+    footer .background-img{
+        background-image: url("https://cdn.discordapp.com/attachments/974850653732077598/975227263614345276/unknown.png");
+    }
+    
+    .background-img {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+    }
+    
+    main img {
+        float: left;
+        margin:50px 80px 50px 20px;
+    }
+    
+    
+    h2 {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
+    
+    .description {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 40px;
+        margin-bottom:75px;
+        margin-top:50px;
+        font-family: "Courier New";
+        line-height:1.6;
+    }
+    
+
+    
+    .text {
+        padding-left: 50px;
+        padding-top: 30px;
+    }
+    
+    #aboutName {
+        margin-top:50px;
+    }
+    
+    .footerText {
+        color:white;
+        text-align:right;
+        padding-top: 40vh; 
+        padding-right:100px;
+        font-weight: bolder;
+        font-size:xx-large;
+    }
+    
+    .footerPara {
+        padding-top:-50px;
+        padding-right:100px;
+        text-align:right;
+        color:white;
+        font-family: "Courier New";
+        font-size:large;
+    }
+
+    .align-right{
+      border:none;
+    }
+
+    </style>
+    <!--<link href="static/style.css" rel="stylesheet">-->
+</head>
+<body>
+    <div class="nav">
+        <a href="/"><div class="logo"><img src="https://cdn.discordapp.com/attachments/974850653732077598/975075583220383815/unknown.png" height="60"></a>
+        </div>
+        <div class="container">
+            <ul>
+                <a href="/#aboutName"><li>About</li></a>
+                <a href='/sign'><li>Sign Up</li></a>
+                <a href="/login"><li>Log In</li></a>
+                <a href="/logout"><li>Log Out</li></a>
+                <a href="/leaderboard"><li>Leaderboard</li></a>
+            </ul>
+        </div>
+    </div>
+    {%block content%}
+    <header>
+        <div class="container" data-aos="fade-in">
+          <h1>Swift Math</h1>
+          <h3>Leading you down the right path!</h3>
+          <a href="/login"><button class="learn-more">Log In</button></a>
+        </div>
+    </header>
+    <main>
+        <img src="https://content.codecademy.com/projects/innovation-cloud/cloud.svg" height="150" width="196">
+        <h2 id="aboutName" data-aos="fade-in">Swift Math</h2>
+        <p class="description" data-aos="fade-in">Swift Math, developed by Divyam Banga, Saumya Nagda, Gurjas Dhillon, and Rasesh Patel, is the embodiment of our vision to coach children and adults in learning and enhancing their mental math skills completely free of charge. We have integrated a leaderboard based on the speed and accuracy of the participant when answering questions. This will help create a very competitive landscape for this astonishingly miraculous game. This leaderboard will include participants from all over the world and motivate the competitors to keep playing and beat their personal best records. As a result, people will dramatically improve their mental math skills, completing our goal and vision for this game.
+</p>
+    </main>
+    <footer data-aos="fade-in">
+        <div class="background-img">
+            <div>
+                <h3 class="footerText">Stay Connected</h3>
+                <h6 class="footerPara">Receive weekly insights from industry insiders.</h6>
+                <div class="align-right"><a href="/#aboutName"><button class=learn-more>About</button></a></div>
+                
+            </div>
+        </div>
+    </footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
+{%endblock%}

@@ -1,0 +1,68 @@
+{% extends "Home.html" %}
+{%block content%}
+</br>
+</br>
+</br>
+</br>
+<style>
+  body {
+    background:linear-gradient(to right, #4ca1af, #2c3e50);
+  }
+  .ques-img:first-child {
+    padding-top: 20px;
+  }
+  .ques-img{
+    padding-bottom:30px;
+    padding-left: 30vw;
+    padding-right: 50px;
+  }
+  .form-control{
+    position:relative;
+    left:20%;
+  }
+
+  .submit-btn {
+    border: none;
+    padding: 20px 40px;
+    margin:0 40vw;
+    background-color: rgb(35, 43, 43);
+    color: white;
+    font-family: "Courier New";
+    transition: opacity 500ms ease-in-out;
+    border-radius:5px;
+  }
+  .submit-btn:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+</style>
+
+<body>
+  <!-- For loop logic of jinja template -->
+  <form method="post" action="/results">
+    <img src={{imgSrcList[0]}} class="ques-img">
+    <input type="text" class="form-control" aria-describedby="emailHelp" name="q1"><br>
+        <img src={{imgSrcList[1]}} class="ques-img">
+    <input type="text" class="form-control" aria-describedby="emailHelp" name="q2"><br>
+        <img src={{imgSrcList[2]}} class="ques-img">
+    <input type="text" class="form-control" aria-describedby="emailHelp" name="q3"><br>
+        <img src={{imgSrcList[3]}} class="ques-img">
+    <input type="text" class="form-control" aria-describedby="emailHelp" name="q4"><br>
+        <img src={{imgSrcList[4]}} class="ques-img">
+    <input type="text" class="form-control" aria-describedby="emailHelp" name="q5"><br>
+        <img src={{imgSrcList[5]}} class="ques-img">
+    <input type="text" class="form-control" aria-describedby="emailHelp" name="q6"><br>
+        <img src={{imgSrcList[6]}} class="ques-img">
+    <input type="text" class="form-control" aria-describedby="emailHelp" name="q7"><br>
+        <img src={{imgSrcList[7]}} class="ques-img">
+    <input type="text" class="form-control" aria-describedby="emailHelp" name="q8"><br>
+        <img src={{imgSrcList[8]}} class="ques-img">
+    <input type="text" class="form-control" aria-describedby="emailHelp" name="q9"><br>
+        <img src={{imgSrcList[9]}} class="ques-img">
+    <input type="text" class="form-control" aria-describedby="emailHelp" name="q10"><br>
+    <!--
+      <li>{{randomlist[i]}}*{{randomlist2[i]}}</li>-->
+  <a href="/results"><button type="submit" class="submit-btn">Submit</button></a>
+  </form>
+</body>  
+{%endblock%}
